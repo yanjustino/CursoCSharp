@@ -1,0 +1,69 @@
+﻿@model SCP.Models.Protocolo
+
+@{
+  ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm())
+{
+  @Html.AntiForgeryToken()
+  @Html.ValidationSummary(true)
+
+  <fieldset>
+    <legend>Protocolo</legend>
+
+    <div class="editor-label">
+      @Html.LabelFor(model => model.DataRecebimento)
+    </div>
+    <div class="editor-field">
+      @Html.EditorFor(model => model.DataRecebimento)
+      @Html.ValidationMessageFor(model => model.DataRecebimento)
+    </div>
+
+    @*<div class="editor-label">
+      @Html.LabelFor(model => model.Status)
+    </div>
+    <div class="editor-field">
+      @Html.DropDownListFor(model => model.Status, Model.GerarListaStatus())
+      @Html.ValidationMessageFor(model => model.Status)
+    </div>*@
+
+    <div class="editor-label">
+      @Html.LabelFor(model => model.Remetente)
+    </div>
+    <div class="editor-field">
+      @Html.EditorFor(model => model.Remetente)
+      @Html.ValidationMessageFor(model => model.Remetente)
+    </div>
+
+    <div class="editor-label">
+      @Html.LabelFor(model => model.Interessado)
+    </div>
+    <div class="editor-field">
+      @Html.EditorFor(model => model.Interessado)
+      @Html.ValidationMessageFor(model => model.Interessado)
+    </div>
+
+    <div class="editor-label">
+      @Html.LabelFor(model => model.Assunto)
+    </div>
+    <div class="editor-field">
+      @Html.EditorFor(model => model.Assunto)
+      @Html.ValidationMessageFor(model => model.Assunto)
+    </div>
+
+    <p>
+      <input type="submit" value="Create" />
+    </p>
+  </fieldset>
+}
+
+<div>
+  @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+  @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,57 @@
+﻿@model SCP.Models.Protocolo
+
+@{
+  ViewBag.Title = "Detail";
+}
+
+<h2>Detail</h2>
+
+<fieldset>
+  <legend>Protocolo</legend>
+
+  <div class="display-label">
+    @Html.DisplayNameFor(model => model.DataRecebimento)
+  </div>
+  <div class="display-field">
+    @Html.DisplayFor(model => model.DataRecebimento)
+  </div>
+
+  @*<div class="display-label">
+    @Html.DisplayNameFor(model => model.Status)
+  </div>
+  <div class="display-field">
+    @Html.DisplayFor(model => model.Status)
+  </div>*@
+
+  <div class="display-label">
+    @Html.DisplayNameFor(model => model.Remetente)
+  </div>
+  <div class="display-field">
+    @Html.DisplayFor(model => model.Remetente)
+  </div>
+
+  <div class="display-label">
+    @Html.DisplayNameFor(model => model.Interessado)
+  </div>
+  <div class="display-field">
+    @Html.DisplayFor(model => model.Interessado)
+  </div>
+
+  <div class="display-label">
+    @Html.DisplayNameFor(model => model.Assunto)
+  </div>
+  <div class="display-field">
+    @Html.DisplayFor(model => model.Assunto)
+  </div>
+
+  <div class="display-label">
+    @Html.DisplayNameFor(model => model.Autenticador)
+  </div>
+  <div class="display-field">
+    @Html.DisplayFor(model => model.Autenticador)
+  </div>
+</fieldset>
+<p>
+  @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+  @Html.ActionLink("Back to List", "Index")
+</p>
